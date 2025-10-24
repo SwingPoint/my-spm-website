@@ -1,0 +1,196 @@
+{
+  "businesses": [
+    {
+      "slug": "swingpointmedia",
+      "name": "SwingPointMedia",
+      "description": "AI Automation and Consulting Agency helping local service-based businesses save $10,000+ annually while attracting ideal customers automatically. We specialize in AI voice agents, content automation, and lead generation systems.",
+      "category": "AI Automation and Consulting Agency",
+      "address": "54102 Avenida Bermudas",
+      "city": "La Quinta",
+      "state": "CA",
+      "zip": "92253",
+      "phone": "760-413-3508",
+      "email": "jeff@swingpointmedia.com",
+      "website": "https://swingpointmedia.com",
+      "hours": {
+        "weekdays": "9am-4pm",
+        "weekends": "Closed"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/swingpointmediainc/",
+        "instagram": "https://www.instagram.com/swingpointmediainc/",
+        "linkedin": "https://www.linkedin.com/in/jeff-harrison-84aa312b/",
+        "twitter": "https://twitter.com/SwingPointMedia",
+        "youtube": "https://www.youtube.com/channel/UCmzvt4zg9H6fV1N9ZrV_z2g"
+      },
+      "mapLink": "https://share.google/2U4Jrpk5rCqrWUQXn",
+      "brandVoice": "Serious & Professional",
+      "brandVibe": "Knowledgeable, Friendly, Trusted Guide, always on the cutting edge to help improve customers results",
+      "founder": {
+        "name": "Jeff Harrison",
+        "title": "The AI Architect",
+        "bio": "Since 2010, Jeff has been intrigued with online marketing and how it can connect local businesses with new customers who may never walk into your physical location, yet end up being your best and most profitable customers. He chose Content Marketing as his tool of choice, and now with AI, he's helping businesses architect workflows that make them more efficient and profitable.",
+        "experience": "14+ years in digital marketing",
+        "specialty": "AI Automation & Content Marketing"
+      },
+      "statistics": {
+        "averageSavings": "$28K",
+        "callCaptureRate": "95%",
+        "availability": "24/7",
+        "leadConversion": "3x"
+      },
+      "services": [
+        {
+          "name": "AI Voice Agents",
+          "description": "24/7 AI customer service that captures every call, books appointments, and qualifies leads automatically",
+          "benefits": ["90% call capture rate", "24/7 availability", "Reduced missed opportunities"]
+        },
+        {
+          "name": "Content Automation",
+          "description": "AI-powered content creation and distribution that answers your customers' questions when they're searching",
+          "benefits": ["Consistent content creation", "SEO optimization", "Lead generation"]
+        },
+        {
+          "name": "AI Integration Consulting",
+          "description": "Strategic AI implementation tailored to your business needs and industry requirements",
+          "benefits": ["Custom solutions", "Industry expertise", "ROI optimization"]
+        },
+        {
+          "name": "Lead Generation Systems",
+          "description": "Automated systems that attract and nurture your ideal customers without manual effort",
+          "benefits": ["Qualified leads", "Automated nurturing", "Higher conversion rates"]
+        }
+      ],
+      "industries": [
+        {
+          "name": "Home Services",
+          "description": "Plumbers, Electricians, HVAC",
+          "challenge": "Peak season overwhelms phone lines",
+          "solution": "AI agents capture every emergency call, book appointments, and qualify leads 24/7",
+          "results": ["90% call capture rate", "$18K saved in missed opportunities", "3x faster response times"]
+        },
+        {
+          "name": "Healthcare Practices",
+          "description": "Dental, Medical, Therapy",
+          "challenge": "Appointment scheduling and patient follow-ups consume staff time",
+          "solution": "AI handles appointment booking, reminders, and initial patient screening",
+          "results": ["40% reduction in no-shows", "$22K in staff time savings", "Improved patient satisfaction"]
+        },
+        {
+          "name": "Automotive Services",
+          "description": "Auto Repair, Detailing, Towing",
+          "challenge": "Customers call after hours for emergency services",
+          "solution": "AI agents provide instant quotes, schedule services, and dispatch teams",
+          "results": ["24/7 emergency coverage", "$15K in after-hours captures", "Faster dispatch times"]
+        },
+        {
+          "name": "Professional Services",
+          "description": "Legal, Accounting, Consulting",
+          "challenge": "Lead qualification and initial consultations take hours",
+          "solution": "AI pre-qualifies leads, schedules consultations, and nurtures prospects",
+          "results": ["3x more qualified leads", "$25K in efficiency gains", "Higher conversion rates"]
+        },
+        {
+          "name": "Beauty & Wellness",
+          "description": "Salons, Spas, Fitness",
+          "challenge": "Booking management and client communication is time-intensive",
+          "solution": "AI manages bookings, sends reminders, and promotes services automatically",
+          "results": ["50% reduction in cancellations", "$12K in improved retention", "Automated upselling"]
+        },
+        {
+          "name": "Contractors",
+          "description": "General, Roofing, Landscaping",
+          "challenge": "Estimating and project communication overwhelms small teams",
+          "solution": "AI provides instant estimates, project updates, and customer communication",
+          "results": ["60% faster estimates", "$20K in time savings", "Better project tracking"]
+        }
+      ],
+      "process": [
+        {
+          "step": "Research",
+          "title": "Research",
+          "description": "We reverse engineer it…unless your ideal customers are asking for the answer, we don't waste time, effort or money making it.",
+          "icon": "🔍"
+        },
+        {
+          "step": "Create",
+          "title": "Create",
+          "description": "Now that we have the facts, from the research to back up our content creation decisions, we create the ideal, customers calling you on the phone, type of content.",
+          "icon": "✍️"
+        },
+        {
+          "step": "Distribute",
+          "title": "Distribute",
+          "description": "The best content created, without a way to ensure your ideal customers, most likely to buy, don't see it, will fail. At SwingPointMedia, your decision making content is waiting for them, so they can call you. Automatically.",
+          "icon": "📡"
+        },
+        {
+          "step": "Measure",
+          "title": "Bonus - Measure",
+          "description": "We are obsessed with the data. We measure everything. Today, if you are doing any marketing and not measuring, it's like walking into a dark room…your toes (budget) are exposed to hitting the leg on the chair….Ouch.",
+          "icon": "📊"
+        }
+      ],
+      "testimonials": [
+        {
+          "rating": "4.9/5",
+          "clients": "200+ satisfied clients",
+          "description": "No long-term contracts, Results within 30 days"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What is content marketing?",
+          "answer": "Creating things like blogs, videos and social posts that serve as answers to their ideal customers questions"
+        },
+        {
+          "question": "How long to see results?",
+          "answer": "For a typical local business, 6-9 months, unless they already have some online presence."
+        },
+        {
+          "question": "What AI tools can be used to help my business grow?",
+          "answer": "We create automation workflows to help generate consistent content, in addition, AI chatbots for your website and social, AI voice agents for answering incoming calls to eliminate and reduce poor customer service and missed opportunities."
+        },
+        {
+          "question": "How much can I save with AI automation?",
+          "answer": "Our service-based business clients typically save $20,000-$50,000 annually while dramatically improving customer experience and lead conversion."
+        },
+        {
+          "question": "What industries do you serve?",
+          "answer": "We specialize in home services (HVAC, plumbing, electrical), healthcare practices, automotive services, professional services, beauty & wellness, and contractors."
+        },
+        {
+          "question": "Do you offer free consultations?",
+          "answer": "Yes! We offer free AI assessments and consultations to help you understand how AI automation can transform your business operations."
+        }
+      ],
+      "blogPosts": [
+        {
+          "title": "The Cost of Ignoring AI: Staying Old-School Can Hurt Your Business",
+          "url": "https://swingpointmedia.com/ignoring-ai-can-hurt-your-business/",
+          "excerpt": "Learn why businesses that don't adapt to AI are falling behind their competitors."
+        },
+        {
+          "title": "It Won't Sound Like You Until You Train AI: Why Poor Data Leads to Poor Results",
+          "url": "https://swingpointmedia.com/it-wont-sound-like-you-until-you-train-ai/",
+          "excerpt": "Discover the importance of proper AI training for authentic business communication."
+        },
+        {
+          "title": "AI and Marketing: Why 90% Isn't Enough",
+          "url": "https://swingpointmedia.com/ai-and-marketing-why-90-isnt-enough/",
+          "excerpt": "Understanding why partial AI implementation won't deliver the results you need."
+        },
+        {
+          "title": "How AI Search is Changing SEO: Why Small Businesses Must Adapt Now",
+          "url": "https://swingpointmedia.com/ai-search-seo-small-business-coachella/",
+          "excerpt": "The future of search is here - learn how to optimize for AI-powered search engines."
+        },
+        {
+          "title": "Answer Engine Optimization (AEO): The Next Frontier Beyond SEO",
+          "url": "https://swingpointmedia.com/answer-engine-optimization-the-next-frontier/",
+          "excerpt": "Move beyond traditional SEO with Answer Engine Optimization strategies."
+        }
+      ]
+    }
+  ]
+}

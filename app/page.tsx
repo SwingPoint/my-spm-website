@@ -98,10 +98,64 @@ export default function HomePage() {
     }))
   }
 
+  // Organization JSON-LD for better business understanding
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": business.name,
+    "description": business.description,
+    "url": business.website,
+    "logo": "https://swingpointmedia.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": business.phone,
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": business.address,
+      "addressLocality": business.city,
+      "addressRegion": business.state,
+      "postalCode": business.zip,
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      business.social.facebook,
+      business.social.instagram,
+      business.social.linkedin,
+      business.social.twitter,
+      business.social.youtube
+    ]
+  }
+
+  // WebSite JSON-LD for better site understanding
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": business.name,
+    "url": business.website,
+    "description": business.description,
+    "publisher": {
+      "@type": "Organization",
+      "name": business.name
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://swingpointmedia.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+
   return (
     <>
       <JsonLd data={jsonLdData} />
       <JsonLd data={faqJsonLd} />
+      <JsonLd data={organizationJsonLd} />
+      <JsonLd data={websiteJsonLd} />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 ai-pattern opacity-30"></div>
@@ -203,8 +257,12 @@ export default function HomePage() {
               <h2 id="ai-solutions-heading" className="text-5xl font-bold text-slate-800 mb-6" itemProp="name">
                 AI Solutions That <span className="gradient-text">Actually Save Money</span>
               </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto" itemProp="description">
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8" itemProp="description">
                 Our service-based business clients typically save $20,000-$50,000 annually while dramatically improving customer experience and lead conversion.
+              </p>
+              <h3 className="text-2xl font-semibold text-slate-700 mb-4">Why Choose Our AI Automation Services?</h3>
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                We combine cutting-edge AI technology with proven business strategies to deliver measurable results for service-based businesses.
               </p>
             </header>
 
@@ -246,8 +304,12 @@ export default function HomePage() {
               <h2 id="industries-heading" className="text-5xl font-bold text-white mb-6" itemProp="name">
                 Real Results for <span className="gradient-text">Service-Based Industries</span>
               </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto" itemProp="description">
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8" itemProp="description">
                 See how AI automation transforms operations across different service industries, delivering measurable ROI and operational efficiency.
+              </p>
+              <h3 className="text-2xl font-semibold text-white mb-4">Industry-Specific AI Solutions</h3>
+              <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+                Each industry faces unique challenges. Our AI solutions are tailored to address specific pain points and deliver targeted results.
               </p>
             </header>
 
@@ -303,6 +365,10 @@ export default function HomePage() {
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8" itemProp="description">
                 Get Busy Serving Your Customers… We Will Get Them In The Door
+              </p>
+              <h3 className="text-2xl font-semibold text-slate-700 mb-4">Our Proven Methodology</h3>
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                We follow a systematic approach that has helped hundreds of businesses achieve sustainable growth through AI automation.
               </p>
             </header>
 

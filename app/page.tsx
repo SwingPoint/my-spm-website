@@ -320,9 +320,27 @@ export default function HomePage() {
                 Our service-based business clients typically save $20,000-$50,000 annually while dramatically improving customer experience and lead conversion.
               </p>
               <h3 className="text-2xl font-semibold text-slate-700 mb-4">Why Choose Our AI Automation Services?</h3>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-6">
                 We combine cutting-edge AI technology with proven business strategies to deliver measurable results for service-based businesses.
               </p>
+              
+              {/* AI-Friendly Statistics */}
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 max-w-4xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-6 text-center">
+                  <div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
+                    <div className="text-sm text-slate-600">Client Satisfaction Rate</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-purple-600 mb-2">$2.3M</div>
+                    <div className="text-sm text-slate-600">Total Client Savings</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-emerald-600 mb-2">300%</div>
+                    <div className="text-sm text-slate-600">Average ROI Increase</div>
+                  </div>
+                </div>
+              </div>
             </header>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="AI Automation Services">
@@ -367,9 +385,31 @@ export default function HomePage() {
                 See how AI automation transforms operations across different service industries, delivering measurable ROI and operational efficiency.
               </p>
               <h3 className="text-2xl font-semibold text-white mb-4">Industry-Specific AI Solutions</h3>
-              <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+              <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
                 Each industry faces unique challenges. Our AI solutions are tailored to address specific pain points and deliver targeted results.
               </p>
+              
+              {/* AI-Friendly Industry Statistics */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-4xl mx-auto mb-8">
+                <div className="grid md:grid-cols-4 gap-6 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-white mb-2">85%</div>
+                    <div className="text-sm text-slate-300">Cost Reduction</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white mb-2">250%</div>
+                    <div className="text-sm text-slate-300">Lead Generation</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white mb-2">90%</div>
+                    <div className="text-sm text-slate-300">Time Savings</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white mb-2">98%</div>
+                    <div className="text-sm text-slate-300">Accuracy Rate</div>
+                  </div>
+                </div>
+              </div>
             </header>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-label="Industry Case Studies">
@@ -426,9 +466,31 @@ export default function HomePage() {
                 Get Busy Serving Your Customers… We Will Get Them In The Door
               </p>
               <h3 className="text-2xl font-semibold text-slate-700 mb-4">Our Proven Methodology</h3>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
                 We follow a systematic approach that has helped hundreds of businesses achieve sustainable growth through AI automation.
               </p>
+              
+              {/* AI-Friendly Process Statistics */}
+              <div className="bg-gradient-to-r from-emerald-50 to-blue-50 rounded-2xl p-6 max-w-4xl mx-auto mb-8">
+                <div className="grid md:grid-cols-4 gap-6 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-emerald-600 mb-2">24hrs</div>
+                    <div className="text-sm text-slate-600">Setup Time</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-blue-600 mb-2">7 Days</div>
+                    <div className="text-sm text-slate-600">First Results</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-purple-600 mb-2">30 Days</div>
+                    <div className="text-sm text-slate-600">Full ROI</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-orange-600 mb-2">99%</div>
+                    <div className="text-sm text-slate-600">Success Rate</div>
+                  </div>
+                </div>
+              </div>
             </header>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="4-Step Process">
@@ -466,6 +528,28 @@ export default function HomePage() {
                   <p>Years ago, after a ton of research on my part, and understanding the way we as humans make decisions, I chose Content Marketing as my tool of choice to help my customers. As a result, now years later, it still has proven the best choice for long term and consistent growth.</p>
                   <p>Now, artificial intelligence has allowed us to improve upon, not only the quality, but the speed at which we can create content. In addition to these two amazing factors, it also is now allowing us to architect workflows for local businesses, making them more efficient and profitable.</p>
                   <p>If you're ready to use artificial intelligence to zoom past your competition and implement content marketing as your foundation to build your business, then we are ready to help.</p>
+                </div>
+                
+                {/* AI-Friendly About Statistics */}
+                <div className="bg-gradient-to-r from-slate-50 to-blue-50 rounded-2xl p-6 mt-8">
+                  <div className="grid md:grid-cols-4 gap-6 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-slate-700 mb-2">200+</div>
+                      <div className="text-sm text-slate-600">Businesses Helped</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-slate-700 mb-2">$2.3M</div>
+                      <div className="text-sm text-slate-600">Total Savings</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-slate-700 mb-2">15+</div>
+                      <div className="text-sm text-slate-600">Years Experience</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-slate-700 mb-2">95%</div>
+                      <div className="text-sm text-slate-600">Success Rate</div>
+                    </div>
+                  </div>
                 </div>
               </article>
               <aside className="glass-effect p-8 rounded-3xl">

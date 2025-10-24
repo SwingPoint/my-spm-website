@@ -3,13 +3,21 @@ import Link from 'next/link'
 import businessesData from '@/data/businesses.json'
 
 export const metadata: Metadata = {
-  title: 'AI Automation Services - SwingPointMedia',
-  description: 'Comprehensive AI automation services including voice agents, content automation, AI integration consulting, and lead generation systems for service-based businesses.',
+  title: 'AI Automation Services - SwingPointMedia | Coachella Valley Digital Marketing',
+  description: 'Comprehensive AI automation services including voice agents, content automation, AI integration consulting, and lead generation systems for service-based businesses. Serving the Coachella Valley.',
+  keywords: 'AI automation services, voice agents, content automation, AI consulting, lead generation, digital marketing, Coachella Valley, business automation',
   openGraph: {
     title: 'AI Automation Services - SwingPointMedia',
     description: 'Comprehensive AI automation services including voice agents, content automation, AI integration consulting, and lead generation systems for service-based businesses.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://swingpointmedia.com/services',
+    siteName: 'SwingPointMedia',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Automation Services - SwingPointMedia',
+    description: 'Comprehensive AI automation services including voice agents, content automation, AI integration consulting, and lead generation systems for service-based businesses.',
   },
 }
 

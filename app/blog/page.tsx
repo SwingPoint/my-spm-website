@@ -3,13 +3,21 @@ import Link from 'next/link'
 import businessesData from '@/data/businesses.json'
 
 export const metadata: Metadata = {
-  title: 'AI Automation Blog - SwingPointMedia',
-  description: 'Latest insights on AI automation, content marketing, and digital transformation for service-based businesses. Expert tips and strategies from The AI Architect.',
+  title: 'AI Automation Blog - SwingPointMedia | Coachella Valley Digital Marketing Insights',
+  description: 'Latest insights on AI automation, content marketing, and digital transformation for service-based businesses. Expert tips and strategies from The AI Architect serving the Coachella Valley.',
+  keywords: 'AI automation blog, content marketing insights, digital transformation, business automation, AI consulting, Coachella Valley, digital marketing tips',
   openGraph: {
     title: 'AI Automation Blog - SwingPointMedia',
     description: 'Latest insights on AI automation, content marketing, and digital transformation for service-based businesses.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://swingpointmedia.com/blog',
+    siteName: 'SwingPointMedia',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Automation Blog - SwingPointMedia',
+    description: 'Latest insights on AI automation, content marketing, and digital transformation for service-based businesses.',
   },
 }
 

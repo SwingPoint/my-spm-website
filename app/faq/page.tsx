@@ -4,13 +4,21 @@ import JsonLd from '@/components/JsonLd'
 import businessesData from '@/data/businesses.json'
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions - SwingPointMedia',
-  description: 'Get answers to common questions about digital marketing, AI automation, content marketing, and business growth strategies.',
+  title: 'Frequently Asked Questions - SwingPointMedia | AI Automation & Digital Marketing',
+  description: 'Get answers to common questions about digital marketing, AI automation, content marketing, and business growth strategies. Expert insights from SwingPointMedia serving the Coachella Valley.',
+  keywords: 'FAQ, AI automation questions, digital marketing help, content marketing, business growth, Coachella Valley, AI consulting',
   openGraph: {
     title: 'Frequently Asked Questions - SwingPointMedia',
     description: 'Get answers to common questions about digital marketing, AI automation, content marketing, and business growth strategies.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://swingpointmedia.com/faq',
+    siteName: 'SwingPointMedia',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Frequently Asked Questions - SwingPointMedia',
+    description: 'Get answers to common questions about digital marketing, AI automation, content marketing, and business growth strategies.',
   },
 }
 

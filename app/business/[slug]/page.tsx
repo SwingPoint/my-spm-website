@@ -30,12 +30,20 @@ export async function generateMetadata({ params }: BusinessPageProps): Promise<M
 
   return {
     title: `${business.name} - ${business.category} | ${business.city}, ${business.state}`,
-    description: business.description,
+    description: `${business.description} Located in ${business.city}, ${business.state}. ${business.category} serving the Coachella Valley. Contact us at ${business.phone}.`,
+    keywords: `${business.category}, ${business.city}, ${business.state}, AI automation, digital marketing, Coachella Valley, business consulting`,
     openGraph: {
       title: `${business.name} - ${business.category}`,
-      description: business.description,
+      description: `${business.description} Located in ${business.city}, ${business.state}. ${business.category} serving the Coachella Valley.`,
       type: 'website',
       locale: 'en_US',
+      url: `https://swingpointmedia.com/business/${business.slug}`,
+      siteName: 'SwingPointMedia',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${business.name} - ${business.category}`,
+      description: `${business.description} Located in ${business.city}, ${business.state}.`,
     },
   }
 }

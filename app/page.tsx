@@ -1,55 +1,127 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
 import businessesData from '@/data/businesses.json'
+import JsonLd from '@/components/JsonLd'
 
 export const metadata: Metadata = {
   title: 'SwingPointMedia - AI Automation and Consulting Agency | Coachella Valley',
-  description: 'Stop losing calls and customers. Our AI voice agents and content automation help service-based businesses save $10,000+ annually while attracting ideal customers automatically.',
+  description: 'Stop losing calls and customers. Our AI voice agents and content automation help service-based businesses save $10,000+ annually while attracting ideal customers automatically. Serving the Coachella Valley.',
+  keywords: 'AI automation, voice agents, content marketing, Coachella Valley, business automation, lead generation',
   openGraph: {
     title: 'SwingPointMedia - AI Automation and Consulting Agency',
     description: 'Stop losing calls and customers. Our AI voice agents and content automation help service-based businesses save $10,000+ annually while attracting ideal customers automatically.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://swingpointmedia.com',
+    siteName: 'SwingPointMedia',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SwingPointMedia - AI Automation and Consulting Agency',
+    description: 'Stop losing calls and customers. Our AI voice agents and content automation help service-based businesses save $10,000+ annually.',
   },
 }
 
 export default function HomePage() {
   const business = businessesData.businesses[0]
 
+  // JSON-LD structured data for main business entity
+  const jsonLdData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": business.name,
+    "description": business.description,
+    "url": business.website,
+    "telephone": business.phone,
+    "email": business.email,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": business.address,
+      "addressLocality": business.city,
+      "addressRegion": business.state,
+      "postalCode": business.zip,
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.6634",
+      "longitude": "-116.3100"
+    },
+    "openingHours": "Mo-Fr 09:00-16:00",
+    "areaServed": "Coachella Valley",
+    "sameAs": [
+      business.social.facebook,
+      business.social.instagram,
+      business.social.linkedin,
+      business.social.twitter,
+      business.social.youtube
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI Automation Services",
+      "itemListElement": business.services.map(service => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": service.name,
+          "description": service.description
+        }
+      }))
+    }
+  }
+
+  // FAQ JSON-LD for better AI understanding
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": business.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  }
+
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 ai-pattern opacity-30"></div>
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-      <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{animationDelay: '2s'}}></div>
-      <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-emerald-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{animationDelay: '4s'}}></div>
+    <>
+      <JsonLd data={jsonLdData} />
+      <JsonLd data={faqJsonLd} />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 ai-pattern opacity-30"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-emerald-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{animationDelay: '4s'}}></div>
 
-      <div className="relative z-10">
-        {/* Navigation */}
-        <nav className="p-6">
-          <div className="max-w-6xl mx-auto flex justify-between items-center">
-            <Link href="/" className="text-2xl font-bold gradient-text">
-              SwingPointMedia
-            </Link>
-            <div className="hidden md:flex gap-6">
-              <Link href="/services" className="text-slate-600 hover:text-slate-800 transition-colors">
-                Services
+        <div className="relative z-10">
+          {/* Navigation */}
+          <nav className="p-6">
+            <div className="max-w-6xl mx-auto flex justify-between items-center">
+              <Link href="/" className="text-2xl font-bold gradient-text">
+                SwingPointMedia
               </Link>
-              <Link href="/blog" className="text-slate-600 hover:text-slate-800 transition-colors">
-                Blog
-              </Link>
-              <Link href="/faq" className="text-slate-600 hover:text-slate-800 transition-colors">
-                FAQ
-              </Link>
-              <Link href="/business/swingpointmedia" className="text-slate-600 hover:text-slate-800 transition-colors">
-                About
-              </Link>
+              <div className="hidden md:flex gap-6">
+                <Link href="/services" className="text-slate-600 hover:text-slate-800 transition-colors">
+                  Services
+                </Link>
+                <Link href="/blog" className="text-slate-600 hover:text-slate-800 transition-colors">
+                  Blog
+                </Link>
+                <Link href="/faq" className="text-slate-600 hover:text-slate-800 transition-colors">
+                  FAQ
+                </Link>
+                <Link href="/business/swingpointmedia" className="text-slate-600 hover:text-slate-800 transition-colors">
+                  About
+                </Link>
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
 
-        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 py-20">
+          <article>
+            {/* Hero Section */}
+            <header className="min-h-screen flex items-center justify-center px-4 py-20">
           <div className="max-w-6xl mx-auto text-center">
             <div className="animate-slide-up">
               <div className="inline-flex items-center gap-2 px-6 py-3 glass-effect rounded-full mb-8">
@@ -108,7 +180,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </section>
+        </header>
 
         {/* AI Solutions Section */}
         <section className="py-20 px-4">
@@ -432,7 +504,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        </div>
-      </main>
+        </article>
+      </div>
+    </main>
+    </>
   )
 }

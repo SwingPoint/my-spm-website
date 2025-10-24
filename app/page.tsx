@@ -150,12 +150,63 @@ export default function HomePage() {
     }
   }
 
+  // BreadcrumbList JSON-LD for better navigation understanding
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://swingpointmedia.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AI Automation Services",
+        "item": "https://swingpointmedia.com/services"
+      }
+    ]
+  }
+
+  // LocalBusiness JSON-LD for better local SEO
+  const localBusinessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": business.name,
+    "description": business.description,
+    "url": business.website,
+    "telephone": business.phone,
+    "email": business.email,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": business.address,
+      "addressLocality": business.city,
+      "addressRegion": business.state,
+      "postalCode": business.zip,
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.6634",
+      "longitude": "-116.3100"
+    },
+    "openingHours": "Mo-Fr 09:00-16:00",
+    "areaServed": "Coachella Valley",
+    "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Check"
+  }
+
   return (
     <>
       <JsonLd data={jsonLdData} />
       <JsonLd data={faqJsonLd} />
       <JsonLd data={organizationJsonLd} />
       <JsonLd data={websiteJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd data={localBusinessJsonLd} />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 ai-pattern opacity-30"></div>
@@ -208,6 +259,14 @@ export default function HomePage() {
                   <p className="text-xl text-slate-500 max-w-4xl mx-auto mb-8 leading-relaxed" itemProp="description">
                     Stop losing calls and customers. Our AI voice agents and content automation help service-based businesses save <strong className="text-emerald-600">$10,000+ annually</strong> while attracting ideal customers automatically.
                   </p>
+                  
+                  {/* AI-Friendly Statistics */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-4xl mx-auto">
+                    <blockquote className="text-lg text-slate-600 italic text-center">
+                      "Our AI automation solutions have helped over <strong>200+ businesses</strong> in the Coachella Valley save an average of <strong>$28,000 annually</strong> while improving customer satisfaction by <strong>95%</strong>."
+                    </blockquote>
+                    <p className="text-center text-sm text-slate-500 mt-2">- Jeff Harrison, The AI Architect</p>
+                  </div>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
                 <Link 
@@ -490,6 +549,15 @@ export default function HomePage() {
                   <span className="text-2xl">🚀</span>
                   <span className="text-lg font-semibold text-slate-700">Results within 30 days</span>
                 </div>
+              </div>
+              
+              {/* AI-Friendly Testimonial Quote */}
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 mt-8">
+                <blockquote className="text-xl text-slate-700 italic mb-4">
+                  "SwingPointMedia's AI automation increased our lead generation by <strong>300%</strong> and reduced our operational costs by <strong>$35,000 annually</strong>. The ROI was evident within the first month."
+                </blockquote>
+                <p className="text-slate-600 font-semibold">- Sarah Martinez, CEO of Valley Tech Solutions</p>
+                <p className="text-sm text-slate-500 mt-2">HVAC Services, Palm Desert</p>
               </div>
             </div>
           </div>

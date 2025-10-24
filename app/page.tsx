@@ -7,6 +7,17 @@ export const metadata: Metadata = {
   title: 'SwingPointMedia - AI Automation and Consulting Agency | Coachella Valley',
   description: 'Stop losing calls and customers. Our AI voice agents and content automation help service-based businesses save $10,000+ annually while attracting ideal customers automatically. Serving the Coachella Valley.',
   keywords: 'AI automation, voice agents, content marketing, Coachella Valley, business automation, lead generation',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'SwingPointMedia - AI Automation and Consulting Agency',
     description: 'Stop losing calls and customers. Our AI voice agents and content automation help service-based businesses save $10,000+ annually while attracting ideal customers automatically.',
@@ -19,6 +30,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SwingPointMedia - AI Automation and Consulting Agency',
     description: 'Stop losing calls and customers. Our AI voice agents and content automation help service-based businesses save $10,000+ annually.',
+  },
+  alternates: {
+    canonical: 'https://swingpointmedia.com',
   },
 }
 
@@ -119,7 +133,7 @@ export default function HomePage() {
             </div>
           </nav>
 
-          <article>
+          <article itemScope itemType="https://schema.org/Article">
             {/* Hero Section */}
             <header className="min-h-screen flex items-center justify-center px-4 py-20">
               <div className="max-w-6xl mx-auto text-center">
@@ -129,15 +143,15 @@ export default function HomePage() {
                     <span className="text-slate-700 font-medium">AI-Powered Business Solutions</span>
                   </div>
                   
-                  <h1 className="text-6xl md:text-8xl font-black mb-6">
+                  <h1 className="text-6xl md:text-8xl font-black mb-6" itemProp="headline">
                     <span className="gradient-text">AI Automation</span>
                     <br />
                     <span className="text-slate-800">and Consulting Agency</span>
           </h1>
-                  <p className="text-2xl md:text-3xl font-semibold text-slate-600 mb-4">
+                  <p className="text-2xl md:text-3xl font-semibold text-slate-600 mb-4" itemProp="alternativeHeadline">
                     for Businesses
                   </p>
-                  <p className="text-xl text-slate-500 max-w-4xl mx-auto mb-8 leading-relaxed">
+                  <p className="text-xl text-slate-500 max-w-4xl mx-auto mb-8 leading-relaxed" itemProp="description">
                     Stop losing calls and customers. Our AI voice agents and content automation help service-based businesses save <strong className="text-emerald-600">$10,000+ annually</strong> while attracting ideal customers automatically.
                   </p>
               
@@ -183,13 +197,13 @@ export default function HomePage() {
         </header>
 
         {/* AI Solutions Section */}
-        <section className="py-20 px-4" aria-labelledby="ai-solutions-heading">
+        <section className="py-20 px-4" aria-labelledby="ai-solutions-heading" itemScope itemType="https://schema.org/Service">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16 animate-fade-in">
-              <h2 id="ai-solutions-heading" className="text-5xl font-bold text-slate-800 mb-6">
+              <h2 id="ai-solutions-heading" className="text-5xl font-bold text-slate-800 mb-6" itemProp="name">
                 AI Solutions That <span className="gradient-text">Actually Save Money</span>
               </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto" itemProp="description">
                 Our service-based business clients typically save $20,000-$50,000 annually while dramatically improving customer experience and lead conversion.
               </p>
             </header>
@@ -201,12 +215,14 @@ export default function HomePage() {
                   className="group card-hover glass-effect p-8 rounded-3xl relative overflow-hidden"
                   style={{animationDelay: `${index * 0.1}s`}}
                   role="listitem"
+                  itemScope 
+                  itemType="https://schema.org/Service"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
                     <div className="text-4xl mb-4" aria-label="AI Service Icon">🤖</div>
-                    <h3 className="text-2xl font-bold text-slate-800 mb-4">{service.name}</h3>
-                    <p className="text-slate-600 leading-relaxed mb-4">{service.description}</p>
+                    <h3 className="text-2xl font-bold text-slate-800 mb-4" itemProp="name">{service.name}</h3>
+                    <p className="text-slate-600 leading-relaxed mb-4" itemProp="description">{service.description}</p>
                     <ul className="space-y-2" role="list" aria-label={`${service.name} Benefits`}>
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-sm text-slate-600" role="listitem">
@@ -223,14 +239,14 @@ export default function HomePage() {
         </section>
 
         {/* Industries Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative" aria-labelledby="industries-heading">
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative" aria-labelledby="industries-heading" itemScope itemType="https://schema.org/ItemList">
           <div className="absolute inset-0 neural-network opacity-10"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <header className="text-center mb-16">
-              <h2 id="industries-heading" className="text-5xl font-bold text-white mb-6">
+              <h2 id="industries-heading" className="text-5xl font-bold text-white mb-6" itemProp="name">
                 Real Results for <span className="gradient-text">Service-Based Industries</span>
               </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto" itemProp="description">
                 See how AI automation transforms operations across different service industries, delivering measurable ROI and operational efficiency.
               </p>
             </header>
@@ -242,11 +258,13 @@ export default function HomePage() {
                   className="group card-hover glass-effect p-8 rounded-3xl relative overflow-hidden"
                   style={{animationDelay: `${index * 0.1}s`}}
                   role="listitem"
+                  itemScope 
+                  itemType="https://schema.org/ListItem"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold text-white mb-2">{industry.name}</h3>
-                    <p className="text-slate-300 mb-4">{industry.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2" itemProp="name">{industry.name}</h3>
+                    <p className="text-slate-300 mb-4" itemProp="description">{industry.description}</p>
                     
                     <div className="mb-4">
                       <h4 className="text-lg font-semibold text-blue-400 mb-2">Challenge</h4>
@@ -277,13 +295,13 @@ export default function HomePage() {
         </section>
 
         {/* Process Section */}
-        <section className="py-20 px-4" aria-labelledby="process-heading">
+        <section className="py-20 px-4" aria-labelledby="process-heading" itemScope itemType="https://schema.org/HowTo">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16">
-              <h2 id="process-heading" className="text-5xl font-bold text-slate-800 mb-6">
+              <h2 id="process-heading" className="text-5xl font-bold text-slate-800 mb-6" itemProp="name">
                 The Plan in <span className="gradient-text">4 Simple Steps</span>
               </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8" itemProp="description">
                 Get Busy Serving Your Customers… We Will Get Them In The Door
               </p>
             </header>
@@ -295,12 +313,14 @@ export default function HomePage() {
                   className="group card-hover glass-effect p-8 rounded-3xl relative overflow-hidden text-center"
                   style={{animationDelay: `${index * 0.1}s`}}
                   role="listitem"
+                  itemScope 
+                  itemType="https://schema.org/HowToStep"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
                     <div className="text-6xl mb-6" aria-label={`Step ${index + 1} Icon`}>{step.icon}</div>
-                    <h3 className="text-2xl font-bold text-slate-800 mb-4">{step.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{step.description}</p>
+                    <h3 className="text-2xl font-bold text-slate-800 mb-4" itemProp="name">{step.title}</h3>
+                    <p className="text-slate-600 leading-relaxed" itemProp="text">{step.description}</p>
                   </div>
                 </article>
               ))}
@@ -309,14 +329,14 @@ export default function HomePage() {
         </section>
 
         {/* About Jeff Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50" aria-labelledby="about-jeff-heading">
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50" aria-labelledby="about-jeff-heading" itemScope itemType="https://schema.org/Person">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <article>
-                <h2 id="about-jeff-heading" className="text-4xl font-bold text-slate-800 mb-6">
-                  Hi I'm <span className="gradient-text">{business.founder.name}</span> - {business.founder.title}
+                <h2 id="about-jeff-heading" className="text-4xl font-bold text-slate-800 mb-6" itemProp="name">
+                  Hi I'm <span className="gradient-text">{business.founder.name}</span> - <span itemProp="jobTitle">{business.founder.title}</span>
                 </h2>
-                <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
+                <div className="space-y-4 text-lg text-slate-600 leading-relaxed" itemProp="description">
                   <p>{business.founder.bio}</p>
                   <p>Years ago, after a ton of research on my part, and understanding the way we as humans make decisions, I chose Content Marketing as my tool of choice to help my customers. As a result, now years later, it still has proven the best choice for long term and consistent growth.</p>
                   <p>Now, artificial intelligence has allowed us to improve upon, not only the quality, but the speed at which we can create content. In addition to these two amazing factors, it also is now allowing us to architect workflows for local businesses, making them more efficient and profitable.</p>
@@ -351,42 +371,42 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4" aria-labelledby="testimonials-heading">
+        <section className="py-20 px-4" aria-labelledby="testimonials-heading" itemScope itemType="https://schema.org/ItemList">
           <div className="max-w-6xl mx-auto">
             <header className="text-center mb-16">
-              <h2 id="testimonials-heading" className="text-5xl font-bold text-slate-800 mb-6">
+              <h2 id="testimonials-heading" className="text-5xl font-bold text-slate-800 mb-6" itemProp="name">
                 Average <span className="gradient-text">Client Results</span>
               </h2>
             </header>
 
-            <div className="grid md:grid-cols-4 gap-8 mb-16" role="list" aria-label="Client Results Statistics">
-              <div className="text-center" role="listitem">
+            <div className="grid md:grid-cols-4 gap-8 mb-16" role="list" aria-label="Client Results Statistics" itemProp="itemListElement">
+              <div className="text-center" role="listitem" itemScope itemType="https://schema.org/ListItem">
                 <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl" aria-label="Money Icon">💰</span>
                 </div>
-                <div className="text-4xl font-bold text-emerald-600 mb-2" aria-label="Average Annual Savings">{business.statistics.averageSavings}</div>
-                <div className="text-lg text-slate-600">Annual Savings</div>
+                <div className="text-4xl font-bold text-emerald-600 mb-2" aria-label="Average Annual Savings" itemProp="name">{business.statistics.averageSavings}</div>
+                <div className="text-lg text-slate-600" itemProp="description">Annual Savings</div>
               </div>
-              <div className="text-center" role="listitem">
+              <div className="text-center" role="listitem" itemScope itemType="https://schema.org/ListItem">
                 <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl" aria-label="Phone Icon">📞</span>
                 </div>
-                <div className="text-4xl font-bold text-blue-600 mb-2" aria-label="Call Capture Rate">{business.statistics.callCaptureRate}</div>
-                <div className="text-lg text-slate-600">Call Capture Rate</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2" aria-label="Call Capture Rate" itemProp="name">{business.statistics.callCaptureRate}</div>
+                <div className="text-lg text-slate-600" itemProp="description">Call Capture Rate</div>
               </div>
-              <div className="text-center" role="listitem">
+              <div className="text-center" role="listitem" itemScope itemType="https://schema.org/ListItem">
                 <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl" aria-label="Clock Icon">⏰</span>
                 </div>
-                <div className="text-4xl font-bold text-purple-600 mb-2" aria-label="AI Customer Support Availability">{business.statistics.availability}</div>
-                <div className="text-lg text-slate-600">AI Availability</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2" aria-label="AI Customer Support Availability" itemProp="name">{business.statistics.availability}</div>
+                <div className="text-lg text-slate-600" itemProp="description">AI Availability</div>
               </div>
-              <div className="text-center" role="listitem">
+              <div className="text-center" role="listitem" itemScope itemType="https://schema.org/ListItem">
                 <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl" aria-label="Growth Icon">📈</span>
                 </div>
-                <div className="text-4xl font-bold text-orange-600 mb-2" aria-label="Lead Conversion Rate">{business.statistics.leadConversion}</div>
-                <div className="text-lg text-slate-600">Lead Conversion</div>
+                <div className="text-4xl font-bold text-orange-600 mb-2" aria-label="Lead Conversion Rate" itemProp="name">{business.statistics.leadConversion}</div>
+                <div className="text-lg text-slate-600" itemProp="description">Lead Conversion</div>
               </div>
             </div>
 
@@ -410,14 +430,14 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative" aria-labelledby="cta-heading">
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative" aria-labelledby="cta-heading" itemScope itemType="https://schema.org/Organization">
           <div className="absolute inset-0 neural-network opacity-10"></div>
           <div className="max-w-6xl mx-auto relative z-10">
             <header className="text-center mb-16">
-              <h2 id="cta-heading" className="text-5xl font-bold text-white mb-6">
+              <h2 id="cta-heading" className="text-5xl font-bold text-white mb-6" itemProp="name">
                 How to Become The <span className="gradient-text">Automated Entrepreneur</span>
               </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8" itemProp="description">
                 We remove the pressure of being the expert digital marketer, so you can grow your business.
               </p>
               <p className="text-lg text-slate-400 max-w-2xl mx-auto">

@@ -111,7 +111,7 @@ export default function HomePage() {
 
         <div className="relative z-10">
           {/* Navigation */}
-          <nav className="p-6">
+          <nav className="p-6" role="navigation" aria-label="Main navigation">
             <div className="max-w-6xl mx-auto flex justify-between items-center">
               <Link href="/" className="text-2xl font-bold gradient-text">
                 SwingPointMedia
@@ -197,7 +197,7 @@ export default function HomePage() {
         </header>
 
         {/* AI Solutions Section */}
-        <section className="py-20 px-4" aria-labelledby="ai-solutions-heading" itemScope itemType="https://schema.org/Service">
+        <section className="py-20 px-4" aria-labelledby="ai-solutions-heading" itemScope itemType="https://schema.org/Service" role="region" aria-label="AI Solutions">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16 animate-fade-in">
               <h2 id="ai-solutions-heading" className="text-5xl font-bold text-slate-800 mb-6" itemProp="name">
@@ -239,7 +239,7 @@ export default function HomePage() {
         </section>
 
         {/* Industries Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative" aria-labelledby="industries-heading" itemScope itemType="https://schema.org/ItemList">
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative" aria-labelledby="industries-heading" itemScope itemType="https://schema.org/ItemList" role="region" aria-label="Industries Served">
           <div className="absolute inset-0 neural-network opacity-10"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <header className="text-center mb-16">
@@ -295,7 +295,7 @@ export default function HomePage() {
         </section>
 
         {/* Process Section */}
-        <section className="py-20 px-4" aria-labelledby="process-heading" itemScope itemType="https://schema.org/HowTo">
+        <section className="py-20 px-4" aria-labelledby="process-heading" itemScope itemType="https://schema.org/HowTo" role="region" aria-label="Our Process">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16">
               <h2 id="process-heading" className="text-5xl font-bold text-slate-800 mb-6" itemProp="name">
@@ -329,7 +329,7 @@ export default function HomePage() {
         </section>
 
         {/* About Jeff Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50" aria-labelledby="about-jeff-heading" itemScope itemType="https://schema.org/Person">
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50" aria-labelledby="about-jeff-heading" itemScope itemType="https://schema.org/Person" role="region" aria-label="About the Founder">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <article>
@@ -371,7 +371,7 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4" aria-labelledby="testimonials-heading" itemScope itemType="https://schema.org/ItemList">
+        <section className="py-20 px-4" aria-labelledby="testimonials-heading" itemScope itemType="https://schema.org/ItemList" role="region" aria-label="Client Results">
           <div className="max-w-6xl mx-auto">
             <header className="text-center mb-16">
               <h2 id="testimonials-heading" className="text-5xl font-bold text-slate-800 mb-6" itemProp="name">
@@ -430,7 +430,7 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative" aria-labelledby="cta-heading" itemScope itemType="https://schema.org/Organization">
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative" aria-labelledby="cta-heading" itemScope itemType="https://schema.org/Organization" role="region" aria-label="Call to Action">
           <div className="absolute inset-0 neural-network opacity-10"></div>
           <div className="max-w-6xl mx-auto relative z-10">
             <header className="text-center mb-16">
@@ -530,6 +530,38 @@ export default function HomePage() {
           </div>
         </section>
         </article>
+        
+        {/* Footer */}
+        <footer className="bg-slate-900 text-white py-12 px-6">
+          <div className="max-w-6xl mx-auto text-center">
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold mb-4">SwingPointMedia</h3>
+              <p className="text-slate-300 mb-4">AI Automation and Consulting Agency</p>
+              <p className="text-slate-400">Serving the Coachella Valley</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <div>
+                <h4 className="text-lg font-semibold mb-4">Contact</h4>
+                <p className="text-slate-300">Phone: 760-413-3508</p>
+                <p className="text-slate-300">Email: jeff@swingpointmedia.com</p>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold mb-4">Services</h4>
+                <p className="text-slate-300">AI Voice Agents</p>
+                <p className="text-slate-300">Content Automation</p>
+                <p className="text-slate-300">AI Integration Consulting</p>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold mb-4">Location</h4>
+                <p className="text-slate-300">La Quinta, CA 92253</p>
+                <p className="text-slate-300">Coachella Valley</p>
+              </div>
+            </div>
+            <div className="border-t border-slate-700 pt-8">
+              <p className="text-slate-400">&copy; 2024 SwingPointMedia. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
         </div>
       </main>
     </>

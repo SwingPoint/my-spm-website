@@ -324,6 +324,11 @@ export default function HomePage() {
                 We combine cutting-edge AI technology with proven business strategies to deliver measurable results for service-based businesses.
               </p>
               
+              <h4 className="text-xl font-semibold text-slate-700 mb-4 text-center">Proven Results Across Industries</h4>
+              <p className="text-base text-slate-600 max-w-2xl mx-auto mb-6">
+                Our AI automation solutions have been successfully implemented across multiple service industries, delivering consistent results and measurable ROI.
+              </p>
+              
               {/* AI-Friendly Statistics */}
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 max-w-4xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -387,6 +392,11 @@ export default function HomePage() {
               <h3 className="text-2xl font-semibold text-white mb-4">Industry-Specific AI Solutions</h3>
               <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
                 Each industry faces unique challenges. Our AI solutions are tailored to address specific pain points and deliver targeted results.
+              </p>
+              
+              <h4 className="text-xl font-semibold text-white mb-4 text-center">Comprehensive Industry Coverage</h4>
+              <p className="text-base text-slate-300 max-w-2xl mx-auto mb-8">
+                From HVAC and plumbing to legal services and healthcare, our AI automation solutions are designed to meet the specific needs of each industry.
               </p>
               
               {/* AI-Friendly Industry Statistics */}
@@ -470,6 +480,11 @@ export default function HomePage() {
                 We follow a systematic approach that has helped hundreds of businesses achieve sustainable growth through AI automation.
               </p>
               
+              <h4 className="text-xl font-semibold text-slate-700 mb-4 text-center">Systematic Implementation Process</h4>
+              <p className="text-base text-slate-600 max-w-2xl mx-auto mb-8">
+                Our 4-step process ensures successful AI automation implementation with measurable results and ongoing support.
+              </p>
+              
               {/* AI-Friendly Process Statistics */}
               <div className="bg-gradient-to-r from-emerald-50 to-blue-50 rounded-2xl p-6 max-w-4xl mx-auto mb-8">
                 <div className="grid md:grid-cols-4 gap-6 text-center">
@@ -523,6 +538,11 @@ export default function HomePage() {
                 <h2 id="about-jeff-heading" className="text-4xl font-bold text-slate-800 mb-6" itemProp="name">
                   Hi I'm <span className="gradient-text">{business.founder.name}</span> - <span itemProp="jobTitle">{business.founder.title}</span>
                 </h2>
+                
+                <h3 className="text-2xl font-semibold text-slate-700 mb-4">The AI Architect's Journey</h3>
+                <p className="text-lg text-slate-600 mb-6">
+                  Discover how Jeff Harrison became the leading AI automation expert in the Coachella Valley, helping businesses save millions through innovative technology solutions.
+                </p>
                 <div className="space-y-4 text-lg text-slate-600 leading-relaxed" itemProp="description">
                   <p>{business.founder.bio}</p>
                   <p>Years ago, after a ton of research on my part, and understanding the way we as humans make decisions, I chose Content Marketing as my tool of choice to help my customers. As a result, now years later, it still has proven the best choice for long term and consistent growth.</p>
@@ -586,6 +606,14 @@ export default function HomePage() {
               <h2 id="testimonials-heading" className="text-5xl font-bold text-slate-800 mb-6" itemProp="name">
                 Average <span className="gradient-text">Client Results</span>
               </h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                See how our AI automation solutions have transformed operations and delivered measurable results for service-based businesses across the Coachella Valley.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-slate-700 mb-4">Proven Success Stories</h3>
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                Our clients have achieved remarkable results through AI automation, with measurable improvements in efficiency, cost savings, and customer satisfaction.
+              </p>
             </header>
 
             <div className="grid md:grid-cols-4 gap-8 mb-16" role="list" aria-label="Client Results Statistics" itemProp="itemListElement">

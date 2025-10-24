@@ -122,24 +122,24 @@ export default function HomePage() {
           <article>
             {/* Hero Section */}
             <header className="min-h-screen flex items-center justify-center px-4 py-20">
-          <div className="max-w-6xl mx-auto text-center">
-            <div className="animate-slide-up">
-              <div className="inline-flex items-center gap-2 px-6 py-3 glass-effect rounded-full mb-8">
-                <span className="text-2xl">🤖</span>
-                <span className="text-slate-700 font-medium">AI-Powered Business Solutions</span>
-              </div>
-              
-              <h1 className="text-6xl md:text-8xl font-black mb-6">
-                <span className="gradient-text">AI Automation</span>
-                <br />
-                <span className="text-slate-800">and Consulting Agency</span>
+              <div className="max-w-6xl mx-auto text-center">
+                <div className="animate-slide-up">
+                  <div className="inline-flex items-center gap-2 px-6 py-3 glass-effect rounded-full mb-8">
+                    <span className="text-2xl" aria-label="AI Robot">🤖</span>
+                    <span className="text-slate-700 font-medium">AI-Powered Business Solutions</span>
+                  </div>
+                  
+                  <h1 className="text-6xl md:text-8xl font-black mb-6">
+                    <span className="gradient-text">AI Automation</span>
+                    <br />
+                    <span className="text-slate-800">and Consulting Agency</span>
           </h1>
-              <p className="text-2xl md:text-3xl font-semibold text-slate-600 mb-4">
-                for Businesses
-              </p>
-              <p className="text-xl text-slate-500 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Stop losing calls and customers. Our AI voice agents and content automation help service-based businesses save <strong className="text-emerald-600">$10,000+ annually</strong> while attracting ideal customers automatically.
-              </p>
+                  <p className="text-2xl md:text-3xl font-semibold text-slate-600 mb-4">
+                    for Businesses
+                  </p>
+                  <p className="text-xl text-slate-500 max-w-4xl mx-auto mb-8 leading-relaxed">
+                    Stop losing calls and customers. Our AI voice agents and content automation help service-based businesses save <strong className="text-emerald-600">$10,000+ annually</strong> while attracting ideal customers automatically.
+                  </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
                 <Link 
@@ -163,83 +163,85 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              {/* Statistics */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-emerald-600 mb-2">{business.statistics.averageSavings}</div>
-                  <div className="text-lg text-slate-600">Average Annual Savings</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{business.statistics.callCaptureRate}</div>
-                  <div className="text-lg text-slate-600">Call Capture Rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">{business.statistics.availability}</div>
-                  <div className="text-lg text-slate-600">AI Customer Support</div>
-                </div>
-              </div>
+                      {/* Statistics */}
+                      <section className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" aria-label="Business Performance Statistics">
+                        <div className="text-center">
+                          <div className="text-4xl md:text-5xl font-bold text-emerald-600 mb-2" aria-label="Average Annual Savings">{business.statistics.averageSavings}</div>
+                          <div className="text-lg text-slate-600">Average Annual Savings</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2" aria-label="Call Capture Rate">{business.statistics.callCaptureRate}</div>
+                          <div className="text-lg text-slate-600">Call Capture Rate</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2" aria-label="AI Customer Support Availability">{business.statistics.availability}</div>
+                          <div className="text-lg text-slate-600">AI Customer Support</div>
+                        </div>
+                      </section>
             </div>
           </div>
         </header>
 
         {/* AI Solutions Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4" aria-labelledby="ai-solutions-heading">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16 animate-fade-in">
-              <h2 className="text-5xl font-bold text-slate-800 mb-6">
+            <header className="text-center mb-16 animate-fade-in">
+              <h2 id="ai-solutions-heading" className="text-5xl font-bold text-slate-800 mb-6">
                 AI Solutions That <span className="gradient-text">Actually Save Money</span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 Our service-based business clients typically save $20,000-$50,000 annually while dramatically improving customer experience and lead conversion.
               </p>
-            </div>
+            </header>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="AI Automation Services">
               {business.services.map((service, index) => (
-                <div 
+                <article 
                   key={index}
                   className="group card-hover glass-effect p-8 rounded-3xl relative overflow-hidden"
                   style={{animationDelay: `${index * 0.1}s`}}
+                  role="listitem"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
-                    <div className="text-4xl mb-4">🤖</div>
+                    <div className="text-4xl mb-4" aria-label="AI Service Icon">🤖</div>
                     <h3 className="text-2xl font-bold text-slate-800 mb-4">{service.name}</h3>
                     <p className="text-slate-600 leading-relaxed mb-4">{service.description}</p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2" role="list" aria-label={`${service.name} Benefits`}>
                       {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-sm text-slate-600">
-                          <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                        <li key={idx} className="flex items-center gap-2 text-sm text-slate-600" role="listitem">
+                          <span className="w-2 h-2 bg-emerald-500 rounded-full" aria-hidden="true"></span>
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
         {/* Industries Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative">
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative" aria-labelledby="industries-heading">
           <div className="absolute inset-0 neural-network opacity-10"></div>
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold text-white mb-6">
+            <header className="text-center mb-16">
+              <h2 id="industries-heading" className="text-5xl font-bold text-white mb-6">
                 Real Results for <span className="gradient-text">Service-Based Industries</span>
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 See how AI automation transforms operations across different service industries, delivering measurable ROI and operational efficiency.
               </p>
-            </div>
+            </header>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-label="Industry Case Studies">
               {business.industries.slice(0, 6).map((industry, index) => (
-                <div 
+                <article 
                   key={index}
                   className="group card-hover glass-effect p-8 rounded-3xl relative overflow-hidden"
                   style={{animationDelay: `${index * 0.1}s`}}
+                  role="listitem"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
@@ -258,59 +260,60 @@ export default function HomePage() {
                     
                     <div>
                       <h4 className="text-lg font-semibold text-purple-400 mb-2">Results</h4>
-                      <ul className="space-y-1">
+                      <ul className="space-y-1" role="list" aria-label={`${industry.name} Results`}>
                         {industry.results.map((result, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-sm text-slate-300">
-                            <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                          <li key={idx} className="flex items-center gap-2 text-sm text-slate-300" role="listitem">
+                            <span className="w-2 h-2 bg-purple-500 rounded-full" aria-hidden="true"></span>
                             {result}
                           </li>
                         ))}
                       </ul>
                     </div>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
         {/* Process Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4" aria-labelledby="process-heading">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold text-slate-800 mb-6">
+            <header className="text-center mb-16">
+              <h2 id="process-heading" className="text-5xl font-bold text-slate-800 mb-6">
                 The Plan in <span className="gradient-text">4 Simple Steps</span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
                 Get Busy Serving Your Customers… We Will Get Them In The Door
               </p>
-            </div>
+            </header>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="4-Step Process">
               {business.process.map((step, index) => (
-                <div 
+                <article 
                   key={index}
                   className="group card-hover glass-effect p-8 rounded-3xl relative overflow-hidden text-center"
                   style={{animationDelay: `${index * 0.1}s`}}
+                  role="listitem"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
-                    <div className="text-6xl mb-6">{step.icon}</div>
+                    <div className="text-6xl mb-6" aria-label={`Step ${index + 1} Icon`}>{step.icon}</div>
                     <h3 className="text-2xl font-bold text-slate-800 mb-4">{step.title}</h3>
                     <p className="text-slate-600 leading-relaxed">{step.description}</p>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
         {/* About Jeff Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50">
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50" aria-labelledby="about-jeff-heading">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-slate-800 mb-6">
+              <article>
+                <h2 id="about-jeff-heading" className="text-4xl font-bold text-slate-800 mb-6">
                   Hi I'm <span className="gradient-text">{business.founder.name}</span> - {business.founder.title}
                 </h2>
                 <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
@@ -319,8 +322,8 @@ export default function HomePage() {
                   <p>Now, artificial intelligence has allowed us to improve upon, not only the quality, but the speed at which we can create content. In addition to these two amazing factors, it also is now allowing us to architect workflows for local businesses, making them more efficient and profitable.</p>
                   <p>If you're ready to use artificial intelligence to zoom past your competition and implement content marketing as your foundation to build your business, then we are ready to help.</p>
                 </div>
-              </div>
-              <div className="glass-effect p-8 rounded-3xl">
+              </article>
+              <aside className="glass-effect p-8 rounded-3xl">
                 <div className="text-center mb-6">
                   <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-4xl">👨‍💼</span>
@@ -342,47 +345,47 @@ export default function HomePage() {
                     <span className="text-slate-700">{business.founder.specialty}</span>
                   </div>
                 </div>
-              </div>
+              </aside>
             </div>
           </div>
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4" aria-labelledby="testimonials-heading">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold text-slate-800 mb-6">
+            <header className="text-center mb-16">
+              <h2 id="testimonials-heading" className="text-5xl font-bold text-slate-800 mb-6">
                 Average <span className="gradient-text">Client Results</span>
               </h2>
-            </div>
+            </header>
 
-            <div className="grid md:grid-cols-4 gap-8 mb-16">
-              <div className="text-center">
+            <div className="grid md:grid-cols-4 gap-8 mb-16" role="list" aria-label="Client Results Statistics">
+              <div className="text-center" role="listitem">
                 <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">💰</span>
+                  <span className="text-3xl" aria-label="Money Icon">💰</span>
                 </div>
-                <div className="text-4xl font-bold text-emerald-600 mb-2">{business.statistics.averageSavings}</div>
+                <div className="text-4xl font-bold text-emerald-600 mb-2" aria-label="Average Annual Savings">{business.statistics.averageSavings}</div>
                 <div className="text-lg text-slate-600">Annual Savings</div>
               </div>
-              <div className="text-center">
+              <div className="text-center" role="listitem">
                 <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">📞</span>
+                  <span className="text-3xl" aria-label="Phone Icon">📞</span>
                 </div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">{business.statistics.callCaptureRate}</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2" aria-label="Call Capture Rate">{business.statistics.callCaptureRate}</div>
                 <div className="text-lg text-slate-600">Call Capture Rate</div>
               </div>
-              <div className="text-center">
+              <div className="text-center" role="listitem">
                 <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">⏰</span>
+                  <span className="text-3xl" aria-label="Clock Icon">⏰</span>
                 </div>
-                <div className="text-4xl font-bold text-purple-600 mb-2">{business.statistics.availability}</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2" aria-label="AI Customer Support Availability">{business.statistics.availability}</div>
                 <div className="text-lg text-slate-600">AI Availability</div>
               </div>
-              <div className="text-center">
+              <div className="text-center" role="listitem">
                 <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">📈</span>
+                  <span className="text-3xl" aria-label="Growth Icon">📈</span>
                 </div>
-                <div className="text-4xl font-bold text-orange-600 mb-2">{business.statistics.leadConversion}</div>
+                <div className="text-4xl font-bold text-orange-600 mb-2" aria-label="Lead Conversion Rate">{business.statistics.leadConversion}</div>
                 <div className="text-lg text-slate-600">Lead Conversion</div>
               </div>
             </div>
@@ -407,11 +410,11 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative">
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 relative" aria-labelledby="cta-heading">
           <div className="absolute inset-0 neural-network opacity-10"></div>
           <div className="max-w-6xl mx-auto relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold text-white mb-6">
+            <header className="text-center mb-16">
+              <h2 id="cta-heading" className="text-5xl font-bold text-white mb-6">
                 How to Become The <span className="gradient-text">Automated Entrepreneur</span>
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
@@ -419,11 +422,11 @@ export default function HomePage() {
               </p>
               <p className="text-lg text-slate-400 max-w-2xl mx-auto">
                 If you're exhausted, and tired of being that way, call today and become The Automated Entrepreneur.
-          </p>
-        </div>
+              </p>
+            </header>
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
+              <aside className="space-y-8">
                 <div className="glass-effect p-8 rounded-2xl">
                   <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
                   <div className="space-y-4 text-slate-300">
@@ -476,8 +479,8 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+        </div>
+              </aside>
 
               <div className="text-center">
                 <div className="glass-effect p-12 rounded-3xl">
@@ -485,16 +488,18 @@ export default function HomePage() {
                   <p className="text-slate-300 mb-8 text-lg">
                     Schedule your free consultation and discover how AI automation can transform your business.
                   </p>
-                  <div className="space-y-4">
+                  <div className="space-y-4" role="group" aria-label="Call to Action Buttons">
                     <Link 
                       href="/business/swingpointmedia" 
                       className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-8 rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                      aria-label="Schedule Your Free Consultation"
                     >
                       Schedule Your Free Consultation
                     </Link>
                     <a 
                       href="tel:760-413-3508"
                       className="block w-full glass-effect text-white font-semibold py-4 px-8 rounded-2xl hover:bg-white/10 transition-all duration-300"
+                      aria-label="Call Now: 760-413-3508"
                     >
                       Call 760-413-3508
                     </a>
@@ -505,8 +510,8 @@ export default function HomePage() {
           </div>
         </section>
         </article>
-      </div>
-    </main>
+        </div>
+      </main>
     </>
   )
 }
